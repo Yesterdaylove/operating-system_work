@@ -1,0 +1,3 @@
+/home/item_vscode/DL/example-app/build/CMakeFiles/rebuild_cache.dir
+/home/item_vscode/DL/example-app/build/CMakeFiles/edit_cache.dir
+/home/item_vscode/DL/example-app/build/CMakeFiles/taget.dir
