@@ -9,6 +9,7 @@
 #include <cmath>
 #include <matplotlibcpp.h>
 #include <Python.h>
+//环境配置见CMakeLists.txt
 namespace plt = matplotlibcpp;
 int test() {
     plt::figure(1);
@@ -25,7 +26,7 @@ int main(int argc, const char* argv[]) {
   torch::jit::script::Module module;
   try {
     // Deserialize the ScriptModule from a file using torch::jit::load().
-    module = torch::jit::load(argv[1]);
+    module = torch::jit::load(argv[1]);//载入训练好的模型
   }
   catch (const c10::Error& e) {
     std::cerr << "error loading the model\n";
@@ -33,7 +34,7 @@ int main(int argc, const char* argv[]) {
   }
   std::cout << "ok\n";
 std::vector<torch::jit::IValue> inputs;
-cv::Mat image = cv::imread("/home/annotated_image/as6.j.png");
+cv::Mat image = cv::imread("/home/annotated_image/as6.j.png");//读入图片测试用
 cv::resize(image,image, cv::Size(224,224));
 torch::Tensor img_tensor = torch::from_blob(image.data, {1, image.rows, image.cols, 3}, torch::kByte);
 img_tensor = img_tensor.permute({0, 3, 1, 2});
