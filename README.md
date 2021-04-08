@@ -8,3 +8,5 @@ nothing_important
 训练的模型移植到C++
   
 #python主要用于训练生成模型
+
+模型参数保存为resnet18.pt
