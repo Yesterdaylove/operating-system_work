@@ -10,3 +10,14 @@ nothing_important
 #python主要用于训练生成模型
 
 模型参数保存为resnet18.pt
+
+#执行
+mkdir build
+
+cd build
+
+cmake ..
+
+make
+
+./taget ./resnet18.pt
