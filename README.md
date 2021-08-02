@@ -13,12 +13,11 @@ nothing_important
 
 #执行
 
-mkdir build
+  mkdir build
 
-cd build
+  cd build
 
-cmake ..
+  cmake ..
 
-make
-
-        ./taget ./resnet18.pt
+  make
+  ./taget ./resnet18.pt
